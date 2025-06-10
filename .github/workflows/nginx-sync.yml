@@ -26,7 +26,7 @@ jobs:
             --tenant "${{ secrets.AZURE_TENANT_ID }}"
 
       - name: Sync NGINX Config to Azure
-        uses: nginxinc/nginx-for-azure-deploy-action@v0.3.0
+        uses: kuthiala/nginx-for-azure-deploy-action@main
         with:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           resource-group-name: ${{ secrets.AZURE_RESOURCE_GROUP_NAME }}
