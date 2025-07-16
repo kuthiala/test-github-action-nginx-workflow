@@ -36,3 +36,4 @@ jobs:
           nginx-config-directory-path: configs/
           nginx-root-config-file: nginx.conf
           transformed-nginx-config-directory-path: /etc/nginx/
+          protected-files: protected.conf
