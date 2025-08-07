@@ -27,7 +27,7 @@ jobs:
             --tenant "${{ secrets.AZURE_TENANT_ID }}"
 
       - name: Sync NGINX Config to Azure
-        uses: kuthiala/nginx-for-azure-deploy-action@main
+        uses: kuthiala/nginx-for-azure-deploy-action/github-action@use_nginx_cli
         # uses: nginxinc/nginx-for-azure-deploy-action@v0.4.0
         with:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
@@ -37,3 +37,5 @@ jobs:
           nginx-root-config-file: nginx.conf
           transformed-nginx-config-directory-path: /etc/nginx/
           protected-files: protected.conf
+          nginx-certificates: '[{"certificateName": "myCertificate", "keyvaultSecret": "https://test-n4a-gh-action.vault.azure.net/secrets/myCertificate/189746de2de34c7f84d4ded9b425c45b", "certificateVirtualPath": "/etc/nginx/certs/server1.crt", "keyVirtualPath": "/etc/nginx/certs/server2.key" }]'
+          nginx-deployment-location: eastus2
