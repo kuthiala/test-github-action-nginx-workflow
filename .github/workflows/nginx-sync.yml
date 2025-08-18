@@ -38,7 +38,7 @@ jobs:
           nginx-config-directory-path: configs/
           nginx-root-config-file: nginx.conf
           transformed-nginx-config-directory-path: /etc/nginx/
-          protected-files: protected.conf,protected2.conf
+          # protected-files: protected.conf,protected2.conf
           nginx-certificates: '[{"certificateName": "myCertificate", "keyvaultSecret": "https://nlbtest-customer.vault.azure.net/secrets/aniruddh-test-cert/ee6101bcc4a24a2da15b272b3cb2ae84", "certificateVirtualPath": "/etc/nginx/certs/server1.crt", "keyVirtualPath": "/etc/nginx/certs/server2.key" },{"certificateName": "examplecert", "keyvaultSecret": "https://nlbtest-customer.vault.azure.net/secrets/aniruddh-test-cert-2/7734a318b5274395b3de449d0fc4fd00", "certificateVirtualPath": "/etc/nginx/certs/server12.crt", "keyVirtualPath": "/etc/nginx/certs/server12.key" }]'
           # debug: true
           nginx-deployment-location: eastus2
